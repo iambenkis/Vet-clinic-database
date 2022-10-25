@@ -1,10 +1,10 @@
 /* Database schema to keep the structure of entire database. */
 
 CREATE TABLE animals (
-    id int,
-    pets_name varchar(250),
-    date_of_birth  date,
-    escape_attempts int,
-    neutered boolean,
-    weight_kg decimal
+    id INT,
+    pets_name VARCHAR(250),
+    date_of_birth  DATE,
+    escape_attempts INT,
+    neutered BOOLEAN,
+    weight_kg DECIMAL
 );
