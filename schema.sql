@@ -2,7 +2,7 @@
 
 CREATE TABLE animals (
     id int,
-    name varchar(250),
+    pets_name varchar(250),
     date_of_birth  date,
     escape_attempts int,
     neutered boolean,
