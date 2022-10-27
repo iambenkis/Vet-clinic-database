@@ -1,8 +1,6 @@
 # Vet clinic Database
 
-> This is a database for a vet clinic. It contains information about animals and their owners.
-> It also contains information about the vets and the treatments they have done.
-
+> In this project, I use transactions to update and delete records. I also use aggregate functions and GROUP BY to answer analytical questions.
 
 ## Getting Started
 
