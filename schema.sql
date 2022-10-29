@@ -23,16 +23,30 @@ CREATE TABLE species (
     name VARCHAR(200)
 );
 
+-- Add vets table
+CREATE TABLE vets (
+    id BIGSERIAL PRIMARY KEY,
+    name VARCHAR(250),
+    date_of_graduation DATE,
+    age INT
+);
+
+CREATE TABLE specializations (
+    species_id BIGINT REFERENCES species(id),
+    vets_id BIGINT REFERENCES vets(id)
+);
+
+
+CREATE TABLE visits (
+    animals_id INT,
+    vets_id INT
+);
+
+
 ALTER TABLE animals ADD PRIMARY KEY (id);
 ALTER TABLE animals DROP COLUMN species;
 ALTER TABLE animals ADD species_id BIGINT REFERENCES species(id);
 ALTER TABLE animals ADD owner_id BIGINT REFERENCES owners(id);
-SELECT species.name, COUNT(animals.species_id) FROM animals JOIN species ON species.id = animals.species_id GROUP BY species.name;
-
-SELECT animals.name from animals JOIN owners ON owners.id = animals.owner_id JOIN species on species.id = animals.species_id WHERE animals.species_id = '2' AND animals.owner_id = '2';
-SELECT animals.name from animals JOIN owners ON owners.id = animals.owner_id WHERE animals.escape_attempts = '0' AND animals.owner_id = '5';
-SELECT full_name, COUNT(owner_id) FROM owners JOIN animals on owners.id = animals.owner_id GROUP BY full_name ORDER BY COUNT (owner_id) desc limit 1;
-
 
 
 
