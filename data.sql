@@ -12,25 +12,3 @@ INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight_kg) 
 INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight_kg) VALUES ('Blossom', '1998-10-13', 3, TRUE, 17 );
 INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight_kg) VALUES ('Ditto', '2022-05-14', 4, TRUE, 22 );
 
--- Insert data into the owners table
-INSERT INTO owners (full_name, age) VALUES ('Sam Smith', 34 );
-INSERT INTO owners (full_name, age) VALUES ('Jennifer Orwell', 19 );
-INSERT INTO owners (full_name, age) VALUES ('Bob', 45);
-INSERT INTO owners (full_name, age) VALUES ('Melody Pond', 77 );
-INSERT INTO owners (full_name, age) VALUES ('Dean Winchester', 14 );
-INSERT INTO owners (full_name, age) VALUES ('Jodie Whittaker', 38 );
-
--- Insert data into the species table
-INSERT INTO species (full_name) VALUES ('Pokemon');
-INSERT INTO species (full_name) VALUES ('Digimon');
-
--- Update inserted animals so it include species_id
-UPDATE animals SET species_id = 1 WHERE name LIKE '%mon%';
-UPDATE animals SET species_id = 2 WHERE name NOT LIKE '%mon%';
-
--- Update inserted animals so it include owner_id
-UPDATE animals SET owner_id = 11 WHERE name = 'Agumon';
-UPDATE animals SET owner_id = 12 WHERE name = 'Gabumon' or name = 'Pikachu';
-UPDATE animals SET owner_id = 13 WHERE name = 'Devimon' or name = 'Plantmon';
-UPDATE animals SET owner_id = 14 WHERE name = 'Charmander' or name = 'Squirtle' or name = 'Blossom';
-UPDATE animals SET owner_id = 15 WHERE name = 'Angemon' or name = 'Boarmon';
