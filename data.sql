@@ -34,3 +34,56 @@ UPDATE animals SET owner_id = 12 WHERE name = 'Gabumon' or name = 'Pikachu';
 UPDATE animals SET owner_id = 13 WHERE name = 'Devimon' or name = 'Plantmon';
 UPDATE animals SET owner_id = 14 WHERE name = 'Charmander' or name = 'Squirtle' or name = 'Blossom';
 UPDATE animals SET owner_id = 15 WHERE name = 'Angemon' or name = 'Boarmon';
+
+INSERT INTO vets (name, date_of_graduation, age) VALUES ('William Tatcher','2000-04-23', 45 );
+INSERT INTO vets (name, date_of_graduation, age) VALUES ('Maisy Smith','2019-01-17', 26);
+INSERT INTO vets (name, date_of_graduation, age) VALUES ('Stephanie Mendez','1981-05-04', 64);
+INSERT INTO vets (name, date_of_graduation, age) VALUES ('Jack Harkness','2008-06-08', 38);
+
+INSERT INTO specializations (vets_id, species_id) VALUES
+(1,1),
+(3,1),
+(3,2),
+(4,1);
+
+Gabumon visited Jack Harkness on Feb 2nd, 2021.
+Pikachu visited Maisy Smith on Jan 5th, 2020.
+Pikachu visited Maisy Smith on Mar 8th, 2020.
+Pikachu visited Maisy Smith on May 14th, 2020.
+Devimon visited Stephanie Mendez on May 4th, 2021.
+Charmander visited Jack Harkness on Feb 24th, 2021.
+Plantmon visited Maisy Smith on Dec 21st, 2019.
+Plantmon visited William Tatcher on Aug 10th, 2020.
+Plantmon visited Maisy Smith on Apr 7th, 2021.
+Squirtle visited Stephanie Mendez on Sep 29th, 2019.
+Angemon visited Jack Harkness on Oct 3rd, 2020.
+Angemon visited Jack Harkness on Nov 4th, 2020.
+Boarmon visited Maisy Smith on Jan 24th, 2019.
+Boarmon visited Maisy Smith on May 15th, 2019.
+Boarmon visited Maisy Smith on Feb 27th, 2020.
+Boarmon visited Maisy Smith on Aug 3rd, 2020.
+Blossom visited Stephanie Mendez on May 24th, 2020.
+Blossom visited William Tatcher on Jan 11th, 2021.
+
+INSERT INTO visits (animals_id,vets_id,date_of_visit) VALUES
+  (1, 1, '2020-05-24'),
+  (1, 3, '2020-07-22'),
+  (2, 4, '2021-02-02'),
+  (3, 2, '2020-01-05'),
+  (3, 2, '2020-03-08'),
+  (3, 2, '2020-05-14'),
+  (4, 3, '2021-05-04'),
+  (5, 4, '2021-02-24'),
+  (6, 2, '2019-12-21'),
+  (6, 1, '2020-08-10'),
+  (6, 2, '2021-04-07'),
+  (7, 3, '2019-09-29'),
+  (8, 4, '2020-10-03'),
+  (8, 4, '2020-11-04'),
+  (9, 2, '2019-01-24'),
+  (9, 2, '2019-05-15'),
+  (9, 2, '2020-02-27'),
+  (9, 2, '2020-08-03'),
+  (10, 3, '2020-05-24'),
+  (10, 1, '2021-01-11');
+
