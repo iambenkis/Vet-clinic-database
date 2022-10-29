@@ -1,6 +1,7 @@
 /* Database schema to keep the structure of entire database. */
+
 CREATE TABLE animals (
-    id SERIAL PRIMARY KEY,
+    id INT GENERATED ALWAYS AS IDENTITY,
     name VARCHAR(250),
     date_of_birth  DATE,
     escape_attempts INT,
@@ -47,6 +48,4 @@ ALTER TABLE animals ADD PRIMARY KEY (id);
 ALTER TABLE animals DROP COLUMN species;
 ALTER TABLE animals ADD species_id BIGINT REFERENCES species(id);
 ALTER TABLE animals ADD owner_id BIGINT REFERENCES owners(id);
-
-
 

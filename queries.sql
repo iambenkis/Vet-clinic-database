@@ -62,3 +62,4 @@ ON visits.vets_id = vets.id
 WHERE vets.id = 2
 GROUP BY species.name
 ORDER BY COUNT(animals.name) DESC LIMIT 1;
+
